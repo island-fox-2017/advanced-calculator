@@ -2,29 +2,36 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor() {
+    this.num;
   }
-  add () {
+  add(x, y) {
+    return x + y;
   }
-  substract () {
+  substract(x, y) {
+    return x - y
   }
-  multiply () {
+  multiply(x, y) {
+    return x * y
   }
-  divide () {
+  divide(x, y) {
+    return x / y
   }
-  square () {
+  square(x, y) {
+    return Math.pow(x, y)
   }
-  squareRoot () {
+  squareRoot(x) {
+    return Math.sqrt(x)
   }
 }
 
 /** note : you can use several features from ecmascript, such as:
-* - Classes
-* - Default Parameters
-* - Destructured Assignment
-* - Template Literals
-* - Method Chaining
-*/
+ * - Classes
+ * - Default Parameters
+ * - Destructured Assignment
+ * - Template Literals
+ * - Method Chaining
+ */
 
 module.exports = {
   Calculator
