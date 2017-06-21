@@ -3,20 +3,37 @@
 class Calculator {
   //write your code here
   constructor () {
+
   }
-  add () {
+  add (num1, num2) {
+    return num1 + num2;
   }
-  substract () {
+  substract (num1,num2) {
+    return num1 - num2;
   }
-  multiply () {
+  multiply (num1,num2) {
+    return num1 * num2
   }
-  divide () {
+  divide (num1,num2) {
+    return num1 /num2
   }
-  square () {
+  square (num1 ,num2) {
+      return Math.pow(num1, num2)
   }
-  squareRoot () {
+  squareRoot (num) {
+    return Math.sqrt(num)
+  }
+  luasLingkaran(num){
+    const phi = 3.14;
+    const phi2 = 22/7
+    if(num %7 == 0){
+      return phi2 * Math.pow(num, 2)
+    }  else {
+      return phi * Math.pow(num,2)
+    }
   }
 }
+let calculator = new Calculator();
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
