@@ -52,7 +52,7 @@ let hitung = calc.add(10)
                  .multiply(2)   // 8
                  .divide(4)     // 2
                  .exp(4)        // 16
-                 .squareRoot() // 4
+                 .squareRoot()  // 4
                  .add(6)        // 10
                  .number;
 console.log(hitung);
@@ -71,7 +71,3 @@ console.log(calc.areaOfCircle(hitung).number);
 module.exports = {
   Calculator
 }
-
-
-// var test = calc.add(5).add(3).substract(2).square(2).squareRoot(2).num
-// calc.areaOfCircle(test).hasil();
