@@ -2,19 +2,42 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (num) {
+    this.num = num
+    this.pi = Math.PI
   }
-  add () {
+  add (added) {
+    this.num += added;
+    return this;
   }
-  substract () {
+  substract (subs) {
+    this.num -= subs;
+    return this;
   }
-  multiply () {
+  multiply (mult) {
+    this.num *= mult;
+    return this;
   }
-  divide () {
+  divide (div) {
+    this.num /= div;
+    return this;
   }
-  square () {
+  square (seq) {
+    this.num = Math.pow(this.num, seq)
+    return this;
   }
   squareRoot () {
+    this.num = Math.sqrt(this.num);
+    return this;
+  }
+  
+  calculateCircle(){
+    this.num = this.pi*Math.pow(this.num, 2)
+    return this;
+  }
+  
+  result(){
+    return `hasil akhir perhitungan : ${this.num}`
   }
 }
 
@@ -25,6 +48,7 @@ class Calculator {
 * - Template Literals
 * - Method Chaining
 */
+
 
 module.exports = {
   Calculator
