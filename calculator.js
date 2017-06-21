@@ -2,21 +2,63 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (number) {
+    this.number = number;
+
   }
-  add () {
+
+  add (angka) {
+    this.number += angka;
+    return this;
   }
-  substract () {
+
+  substract (angka) {
+    this.number -= angka;
+    return this;
   }
-  multiply () {
+
+  multiply (angka) {
+    this.number *= angka;
+    return this;
   }
-  divide () {
+
+  divide (angka) {
+    this.number /= angka;
+    return this;
   }
-  square () {
+
+  exp (angka) {
+    this.number = Math.pow(this.number, angka);
+    return this;
   }
+
   squareRoot () {
+    this.number = Math.sqrt(this.number);
+    return this;
   }
-}
+
+  areaOfCircle(jari2) {
+    this.number = Math.PI * (Math.pow(jari2, 2));
+    return this;
+  }
+
+} // --- class Calculator ---
+
+let calc = new Calculator(0);
+
+// let hitung = calc.add(10).substract(6).multiply(2).divide(4).exp(2).squareRoot(2).number;
+let hitung = calc.add(10)
+                 .substract(6)  // 4
+                 .multiply(2)   // 8
+                 .divide(4)     // 2
+                 .exp(4)        // 16
+                 .squareRoot()  // 4
+                 .add(6)        // 10
+                 .number;
+console.log(hitung);
+console.log(calc.areaOfCircle(hitung).number);
+
+
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
