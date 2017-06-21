@@ -1,20 +1,39 @@
 'use strict'
 
 class Calculator {
-  //write your code here
   constructor () {
+    this.angka = 0;
+    this.phi = 3.14;
+    this.phi2 = 22/7;
   }
-  add () {
+  add (bilanganPenambah) {
+    return this.angka += bilanganPenambah;
   }
-  substract () {
+  substract (bilanganPengurang) {
+    return this.angka -= bilanganPengurang;
   }
-  multiply () {
+  multiply (bilanganPengali) {
+    return this.angka *= bilanganPengali;
   }
-  divide () {
+  divide (bilanganPembagi) {
+    return this.angka /= bilanganPembagi;
   }
-  square () {
+  square (bilanganPemangkat) {
+    this.angka = Math.pow(this.angka,bilanganPemangkat);
+    return this.angka;
   }
   squareRoot () {
+    this.angka = Math.sqrt(this.angka);
+    return this.angka;
+  }
+  LuasLingkaran (jariJari) {
+    if (jariJari % 7 == 0) {
+      this.angka = this.phi2 * Math.pow(jariJari,2);
+      return this.angka
+    } else {
+      this.angka = this.phi * Math.pow(jariJari,2);
+      return this.angka
+    }
   }
 }
 
