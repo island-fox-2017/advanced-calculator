@@ -3,36 +3,40 @@
 class Calculator {
   constructor () {
     this.angka = 0;
-    this.phi = 3.14;
-    this.phi2 = 22/7;
   }
   add (bilanganPenambah) {
-    return this.angka += bilanganPenambah;
+    this.angka += bilanganPenambah;
+    return this;
   }
   substract (bilanganPengurang) {
-    return this.angka -= bilanganPengurang;
+    this.angka -= bilanganPengurang;
+    return this;
   }
   multiply (bilanganPengali) {
-    return this.angka *= bilanganPengali;
+    this.angka *= bilanganPengali;
+    return this;
   }
   divide (bilanganPembagi) {
-    return this.angka /= bilanganPembagi;
+    this.angka /= bilanganPembagi;
+    return this;
   }
   square (bilanganPemangkat) {
     this.angka = Math.pow(this.angka,bilanganPemangkat);
-    return this.angka;
+    return this;
   }
   squareRoot () {
     this.angka = Math.sqrt(this.angka);
-    return this.angka;
+    return this;
   }
   LuasLingkaran (jariJari) {
+    const phi = 3.14;
+    const phi2 = 22/7;
     if (jariJari % 7 == 0) {
-      this.angka = this.phi2 * Math.pow(jariJari,2);
-      return this.angka
+      this.angka = phi2 * Math.pow(jariJari,2);
+      return this
     } else {
-      this.angka = this.phi * Math.pow(jariJari,2);
-      return this.angka
+      this.angka = phi * Math.pow(jariJari,2);
+      return this
     }
   }
 }
