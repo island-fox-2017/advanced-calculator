@@ -2,21 +2,49 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (num) {
+    this.angka = num;
+    this.Pi = Math.PI;
   }
-  add () {
+
+  add (num) {
+    this.angka += num;
+    return this;
   }
-  substract () {
+  substract (num) {
+    this.angka -= num;
+    return this;
   }
-  multiply () {
+  multiply (num) {
+    this.angka *= num;
+    return this;
   }
-  divide () {
+  divide (num) {
+    if (this.angka === 0){
+      return 'Why 0, bro?';
+    }else {
+      this.angka /= num;
+      return this;
+    }
   }
-  square () {
+  square (num) {
+    this.angka = Math.pow(this.angka, num); //bisa berapa aja, nggak cuma perpangkatan 2
+    return this;
   }
   squareRoot () {
+    this.angka = Math.sqrt(this.angka);
+    return this;
+  }
+  kelilinglingkarang () {
+    this.angka = this.Pi * Math.pow(this.angka, 2);
+    return this;
+  }
+
+  hasil (){
+    return `Hasil dari perhitungan: ${this.angka}`;
   }
 }
+
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
@@ -25,6 +53,12 @@ class Calculator {
 * - Template Literals
 * - Method Chaining
 */
+
+// let proses = new Calculator(1);
+
+
+// console.log(proses.add(2).substract(1).multiply(10).divide(10).square(2).squareRoot().kelilinglingkarang().hasil());
+
 
 module.exports = {
   Calculator
