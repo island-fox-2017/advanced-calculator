@@ -2,34 +2,35 @@
 
 class Calculator {
   //write your code here
-  constructor () {
-    this.first_Num ;
-    this.Last_Num ;
-
+  constructor (x) {
+    this.angka = x;
   }
-  add (angka1, angka2) {
-    return angka1 + angka2;
+  add (y = 0) {
+    this.angka += y
+    return this
   }
-  substract (angka1, angka2) {
-    return angka1 - angka2;
+  substract (y = 0) {
+    this.angka -= y
+    return this
   }
-  multiply (angka1, angka2) {
-    return angka1 * angka2;
+  multiply (y = 1) {
+    this.angka *= 1
+    return this
   }
-  divide (angka1, angka2) {
-    return angka1/angka2;
+  divide (y = 1) {
+    this.angka /= y
+    return this
   }
-  square (angka1, angka2) {
-    return Math.pow(angka1, angka2)
+  square (y = 2) {
+    this.angka = Math.pow(this.angka, y)
+    return this
   }
-  squareRoot (angka1) {
-    return Math.sqrt(angka1)
+  squareRoot (y = 2) {
+    this.angka = Math.sqrt(this.angka)
+    return this
   }
-  ConstPi (jari1)
-  {
-    const pi = 3.14;
-    return pi*(Math.pow(jari1,2));
-
+  hasil () {
+    return `Result : ${this.angka}`
   }
 }
 
@@ -40,8 +41,10 @@ class Calculator {
 * - Template Literals
 * - Method Chaining
 */
-let myCal = new Calculator()
-console.log(myCal.ConstPi(4));
+var myCal = new Calculator(4);
+
+console.log(myCal.add(5).substract(2).hasil());
+
 
 module.exports = {
   Calculator
