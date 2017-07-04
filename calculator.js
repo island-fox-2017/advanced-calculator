@@ -2,28 +2,55 @@
 
 class Calculator {
   //write your code here
-  constructor() {
-    this.num;
+  constructor(consNum) {
+    this.consNum = consNum;
   }
-  add(x, y) {
-    return x + y;
+  add(addNum) {
+    this.consNum += addNum
+    return this
   }
-  substract(x, y) {
-    return x - y
+  substract(substractNum) {
+    this.consNum -= substractNum
+    return this
   }
-  multiply(x, y) {
-    return x * y
+  multiply(multiplyNum) {
+    this.consNum *= multiplyNum
+    return this
   }
-  divide(x, y) {
-    return x / y
+  divide(divideNum) {
+    this.consNum /= divideNum
+    return this
   }
-  square(x, y) {
-    return Math.pow(x, y)
+  square(squareNum) {
+    this.consNum = Math.pow(this.consNum, squareNum)
+    return this
   }
-  squareRoot(x) {
-    return Math.sqrt(x)
+  squareRoot() {
+    this.consNum = Math.sqrt(this.consNum)
+    return this
   }
+
+  luasLingkaran() {
+    const phi = 3.14;
+    const phi2 = 22 / 7;
+    if (this.consNum % 7 == 0) {
+      this.consNum = phi2 * Math.pow(this.consNum, 2)
+
+    }
+    else {
+      this.consNum = phi * Math.pow(this.consNum, 2)
+    }
+    return this
+  }
+
 }
+
+let calculator = new Calculator(4)
+console.log(calculator.add(3)
+  .substract(1)
+  .square(2)
+  .squareRoot()
+  .luasLingkaran());
 
 /** note : you can use several features from ecmascript, such as:
  * - Classes
