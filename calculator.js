@@ -2,43 +2,51 @@
 
 class Calculator {
   //write your code here
-  constructor (inputSatu, inputDua) {
-    this.inputSatu = inputSatu;
-    this.inputDua= inputDua;
-    this.phi = 3.14
+  constructor (x) {
+    this.angka = x;
   }
-  add () {
-    return this.inputSatu + this.inputDua
+  add (y = 0) {
+    this.angka += y
+    return this
   }
-  substract () {
-    return this.inputSatu - this.inputDua
+  substract (y = 0) {
+    this.angka -= y
+    return this
   }
-  multiply () {
-    return this.inputSatu * this.inputDua
+  multiply (y = 1) {
+    this.angka *= 1
+    return this
   }
-  divide () {
-    return this.inputSatu / this.inputDua
+  divide (y = 1) {
+    this.angka /= y
+    return this
   }
-  square () {
-    return Math.pow(this.inputSatu, this.inputDua)
+  square (y = 1) {
+    this.angka = Math.pow(this.angka, y)
+    return this
   }
   squareRoot () {
-    return Math.sqrt(this.inputSatu)
+    this.angka = Math.sqrt(this.angka)
+    return this
+  }
+  // lingkaran (r){
+  //   return this.phi*(r*r);
+  // }
+  hasil () {
+    return `Hasilnya : ${this.angka}`
+  }
 
-  }
-  lingkaran (r){
-    return this.phi*(r*r);
-  }
 }
-var hitung = new Calculator(81);
+var hitung = new Calculator(4);
 
-console.log(hitung.add(2).substract(1));
-console.log(hitung.substract());
-console.log(hitung.multiply());
-console.log(hitung.divide());
-console.log(hitung.square());
-console.log(hitung.squareRoot());
-console.log(hitung.lingkaran(4));
+console.log(hitung.square(1).add().substract().divide().hasil());
+// console.log(hitung.add();
+// console.log(hitung.substract());
+// console.log(hitung.multiply());
+// console.log(hitung.divide());
+// console.log(hitung.square());
+// console.log(hitung.squareRoot());
+// console.log(hitung.lingkaran(4));
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
